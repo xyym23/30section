@@ -32,12 +32,9 @@ $(document).ready(function () {
     }
   });
 
-
-
   //like disslike
 
   const buttons = document.querySelectorAll(".like-button, .disslike-button");
-
   function handleButtonClick(event) {
     const button = event.currentTarget;
     if (button.style.backgroundColor === "green" || button.style.backgroundColor === "red") {
@@ -48,7 +45,6 @@ $(document).ready(function () {
       button.style.backgroundColor = button.classList.contains("like-button") ? "green" : "red";
       button.querySelector("h4").style.color = "#ffffff";
       button.querySelector("i").style.color = "#ffffff";
-
 
       const siblingButton = button.parentElement.querySelector(button.classList.contains("like-button") ? ".disslike-button" : ".like-button");
       siblingButton.style.backgroundColor = "#eeeeee";
